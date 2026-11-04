@@ -1,0 +1,6 @@
+{
+  "name": "KixyClip AI - Unlimited Free YouTube to Shorts Studio",
+  "description": "Transform any long YouTube video into viral 9:16 Shorts, Reels, and TikToks with one click. Automatic AI summarization, viral hook detection, animated captions, and unlimited free exports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
