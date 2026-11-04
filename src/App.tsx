@@ -217,6 +217,8 @@ export default function App() {
     localStorage.removeItem('kixyclip_active_project');
   };
 
+  const isGitHubPages = typeof window !== 'undefined' && window.location.hostname.includes('github.io');
+
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 flex flex-col font-sans selection:bg-indigo-500/30 selection:text-indigo-200">
       {/* Top Navigation */}
@@ -225,6 +227,22 @@ export default function App() {
         hasActiveProject={!!project}
         activeProjectTitle={project?.title}
       />
+
+      {/* GitHub Pages Notice Banner */}
+      {isGitHubPages && (
+        <div className="bg-gradient-to-r from-amber-500/20 via-orange-500/20 to-red-500/20 border-b border-amber-500/30 px-4 py-2.5 text-center text-xs text-amber-200 flex flex-wrap items-center justify-center gap-2">
+          <span className="font-bold">⚠️ GitHub Pages Static Preview:</span>
+          <span>To access real server-side rendering (yt-dlp downloads, FFmpeg 9:16 compositing & AI voiceovers), open the live Cloud Studio:</span>
+          <a
+            href="https://ais-dev-ddbxerde5wbjj7u75nsdhm-415297126032.asia-southeast1.run.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-2.5 py-0.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-zinc-950 font-extrabold text-[11px] inline-flex items-center gap-1 transition"
+          >
+            Open 3R Shorts Cloud Studio 🚀
+          </a>
+        </div>
+      )}
 
       {/* Main Body */}
       <main className="flex-1">
@@ -262,10 +280,10 @@ export default function App() {
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
               <div className="text-center space-y-2 mb-8">
                 <h2 className="text-xl sm:text-2xl font-black text-white">
-                  Why Creators Use KixyClip AI
+                  Why Creators Use 3R Shorts
                 </h2>
                 <p className="text-xs sm:text-sm text-zinc-400">
-                  Built to streamline editing like Kixy.ai and Opus Clip, but 100% free with unlimited personal use.
+                  Built to automate viral short video creation with animated cartoons, AI voiceovers, and dynamic captions — 100% free with unlimited personal use.
                 </p>
               </div>
 
@@ -356,7 +374,10 @@ export default function App() {
       <footer className="border-t border-zinc-900 bg-zinc-950 py-6 text-center text-xs text-zinc-500">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <span className="font-bold text-zinc-400">KixyClip AI</span>
+            <span className="font-black text-white flex items-center gap-1">
+              <span className="px-1.5 py-0.5 rounded bg-red-600 text-white text-[10px] font-black">3R</span>
+              <span>Shorts</span>
+            </span>
             <span>•</span>
             <span className="text-emerald-400 font-medium">Free Personal Edition</span>
             <span>•</span>

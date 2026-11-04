@@ -24,8 +24,13 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-extrabold text-lg text-white tracking-tight">
-                Kixy<span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400">Clip</span>
+              <span className="font-extrabold text-lg text-white tracking-tight flex items-center gap-1.5">
+                <span className="px-2 py-0.5 rounded-lg bg-gradient-to-r from-red-600 via-orange-500 to-amber-500 text-white font-black text-sm tracking-wider shadow-md">
+                  3R
+                </span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-100 to-zinc-300">
+                  Shorts
+                </span>
               </span>
               <span className="px-2 py-0.5 text-[11px] font-semibold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 rounded-full flex items-center gap-1">
                 <ShieldCheck className="w-3 h-3" /> 100% Free • Unlimited

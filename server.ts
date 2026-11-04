@@ -1430,7 +1430,7 @@ function generateAssSubtitleFile(
   const topMargin = Math.round(outH * 0.08);
 
   const assHeader = `[Script Info]
-Title: KixyClip AI Shorts
+Title: 3R Shorts
 ScriptType: v4.00+
 PlayResX: ${outW}
 PlayResY: ${outH}
@@ -2831,7 +2831,7 @@ async function startServer() {
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`KixyClip AI Server running on http://localhost:${PORT}`);
+    console.log(`3R Shorts Server running on http://localhost:${PORT}`);
   });
 }
 
